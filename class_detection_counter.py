@@ -18,7 +18,7 @@ def count_detections_in_test_set():
     all_images = list(test_images_path.glob('*.jpg'))
     
     if not all_images:
-        print("❌ No test images found!")
+        print(" No test images found!")
         return None
     
     print(f"🔍 Analyzing {len(all_images)} test images...")
@@ -64,10 +64,10 @@ def count_detections_in_test_set():
             for class_name in detected_classes_in_image:
                 image_detection_count[class_name] += 1
     
-    print(f"\n✅ Analysis Complete!")
-    print(f"📊 Total images processed: {len(all_images)}")
-    print(f"📦 Images with detections: {images_with_detections}")
-    print(f"🎯 Total objects detected: {total_detections}")
+    print(f"\nAnalysis Complete!")
+    print(f" Total images processed: {len(all_images)}")
+    print(f" Images with detections: {images_with_detections}")
+    print(f" Total objects detected: {total_detections}")
     
     return {
         'class_counts': class_counter,
@@ -86,7 +86,7 @@ def print_detection_summary(results):
     confidence_scores = results['confidence_scores']
     
     print("\n" + "="*70)
-    print("🎯 DETECTION SUMMARY - ALL TEST IMAGES")
+    print(" DETECTION SUMMARY - ALL TEST IMAGES")
     print("="*70)
     
     # Sort classes by detection count (descending)
